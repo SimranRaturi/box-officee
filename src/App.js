@@ -1,23 +1,34 @@
 /* eslint-disable */
 import React from "react";
 import { Switch, Route } from 'react-router-dom'
-  
+
+ import Navs from './components/Navs'; 
+ import Home from './pages/Home';
+import Starred from "./pages/Starred";
 
 function App() {
   return (
+    <div>
+    <Navs />
+   <Home />
+
+
     <Switch>
       <Route exact path="/">
         This is home page
       </Route>
 
       <Route exact path="/starred">
-        This is start
+        <Starred />
       </Route>
 
       <Route>
-        this is 404 eroor
+        <div>
+          Not found
+        </div>
       </Route>
     </Switch>
+    </div>
   );
   
 }
